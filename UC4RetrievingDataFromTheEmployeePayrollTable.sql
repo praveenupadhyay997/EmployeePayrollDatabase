@@ -1,9 +1,4 @@
 use payroll_services;
-create table employee_payroll
-( EMPID int not null identity(1000,1) primary key,
-EMPNAME varchar(150) not null,
-SALARY float not null,
-STARTDATE date not null);
 /* Reading the entire data from the employee payroll table*/
 select * from employee_payroll;
 /* Inserting the data from the employee payroll table excluding the ID as it is default ad auto-increment*/
@@ -15,3 +10,6 @@ values ('Rajesh Sharma', 30000, '2018-01-03'),
 /* Reading the entire data from the employee payroll table
  Retreiving all the data*/
  select * from employee_payroll;
+ /* Retreiving specific column from the employee payroll table*/
+ select EMPNAME from employee_payroll;
+ select EMPID, EMPNAME from employee_payroll;
